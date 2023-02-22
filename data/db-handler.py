@@ -15,8 +15,7 @@ class Settlement :
         return result
     
 #---------------------------------
-# kalkicode.com 
-# These methods have not been changed by our tools.
+# These methods have not been changed yet:
 # header
 # getHighscore
 # addHighscore
@@ -32,7 +31,7 @@ class Settlement :
 header('Content-Type: application/json')
 # IMPORTANT:
 # * change this to the main url of where you host the application, otherwise, every entry will be marked as a cheater
-#
+# :
 
 hostdomain = 'pacman.platzh1rsch.ch'
 if (isset(_POST['action'])) :
