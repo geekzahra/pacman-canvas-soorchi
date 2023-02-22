@@ -21,9 +21,9 @@ const GHOSTS = {
 
 // global constants
 const FINAL_LEVEL = 10;
-const PILL_POINTS = 10;
-const POWERPILL_POINTS = 50;
-const GHOST_POINTS = 100;
+const PILL_POINTS = 1;
+const POWERPILL_POINTS = 5;
+const GHOST_POINTS = 10;
 const HIGHSCORE_ENABLED = true;
 
 
@@ -193,6 +193,7 @@ function geronimo() {
 			} else {
 				this.powerPillAnimationCounter++;
 			}*/
+			// vibrate the phone after eating super pills =)
 			return this.powerpillSizeCurrent;
 		};
 
@@ -285,7 +286,7 @@ function geronimo() {
 		};
 
 		this.newGame = function () {
-			var r = confirm("Are you sure you want to restart?");
+			var r = confirm("مطمئنی میخوای از اول شروع کنی؟!");
 			if (r) {
 				console.log("new Game");
 				this.init(0);
@@ -302,7 +303,7 @@ function geronimo() {
 			} else {
 				this.level++;
 				console.log("Level " + game.level);
-				game.pauseAndShowMessage("Level " + game.level, this.getLevelTitle() + "<br/>(Click to continue!)");
+				game.pauseAndShowMessage("Level " + game.level, this.getLevelTitle() + "<br/>(برای ادامه بازی کلیک کنید!)");
 				game.refreshLevel(".level");
 				this.init(1);
 			}
@@ -326,34 +327,34 @@ function geronimo() {
 		this.getLevelTitle = function () {
 			switch (this.level) {
 				case 2:
-					return '"The chase begins"';
+					return '"اخطار: وضعیت تعقیب!"';
 					// activate chase / scatter switching
 				case 3:
-					return '"Inky\s awakening"';
+					return '"اینکی در حال بیدار شدنه 👻 "';
 					// Inky starts leaving the ghost house
 				case 4:
-					return '"Clyde\s awakening"';
+					return '"کلاید در حال بیدار شدنه 👻 "';
 					// Clyde starts leaving the ghost house
 				case 5:
-					return '"need for speed"';
+					return '"اخطار: سرعت اشباح بیشتر شد!"';
 					// All the ghosts get faster from now on
 				case 6:
-					return '"hunting season 1"';
+					return '"فصل شکار 1"';
 					// TODO: No scatter mood this time
 				case 7:
-					return '"the big calm"';
+					return '"آرامش قبل از طوفان :) (وضعیت پراکنده)"';
 					// TODO: Only scatter mood this time
 				case 8:
-					return '"hunting season 2"';
+					return '"فصل شکار 2"';
 					// TODO: No scatter mood and all ghosts leave instantly
 				case 9:
-					return '"ghosts on speed"';
+					return '"اخطار: سرعت اشباح خیلی بیشتر شد!"';
 					// TODO: Ghosts get even faster for this level
 				case FINAL_LEVEL:
-					return '"The final chase"';
+					return '"تعقیب نهایی"';
 					// TODO: Ghosts get even faster for this level
 				default:
-					return '"nothing new"';
+					return '"چیز جدیدی نیست :)"';
 			}
 		}
 
@@ -393,9 +394,9 @@ function geronimo() {
 			var inputHTML = scoreIsValid ? `<div id='highscore-form'>
 					<span id='form-validator'></span>
 					<input type='text' id='playerName'/>
-					<span class='button' id='score-submit'>save</span>
+					<span class='button' id='score-submit'>ذخیره</span>
 				</div>` : `<div id='invalid-score'>Your score looks fake, the highscore list is only for honest players ;)</div>`;
-			this.pauseAndShowMessage("Game over", "Total Score: " + this.score.score + (HIGHSCORE_ENABLED ? inputHTML : ''));
+			this.pauseAndShowMessage("GAME OVER", "امتیاز نهایی: " + this.score.score + (HIGHSCORE_ENABLED ? inputHTML : ''));
 			$('#playerName').focus();
 		}
 
