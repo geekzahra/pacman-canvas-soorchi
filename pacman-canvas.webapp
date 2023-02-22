@@ -1,14 +1,13 @@
 ﻿{
-  "name": "Pacman Canvas",
+  "name": "Pacman-Soorchi Version",
   "description": "An old classic, rewritten in HTML5",
   "launch_path": "/",
   "version": "1.0.6",
   "developer": {
-    "name": "platzh1rsch",
-    "url": "http://platzh1rsch.ch"
+    "name": "Zahra Alvandi",
   },
   "icons": {
 	"128": "/img/icon-128.png"
 	},
-  "default_locale": "en"
+  "default_locale": "fa"
 }
