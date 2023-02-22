@@ -4,9 +4,8 @@
 	\____ \__  \ _/ ___\ /     \\__  \  /    \ 
 	|  |_> > __ \\  \___|  Y Y  \/ __ \|   |  \
 	|   __(____  /\___  >__|_|  (____  /___|  /
-	|__|       \/     \/      \/     \/     \/ .platzh1rsch.ch
+	|__|       \/     \/      \/     \/     \/ 
 	
-	author: platzh1rsch		(www.platzh1rsch.ch)
 	
 -------------------------------------------------------------------*/
 
@@ -535,7 +534,7 @@ function geronimo() {
 
 		/* ------------ Start Pre-Build Walls  ------------ */
 		this.buildWalls = function () {
-			if (this.ghostMode === 0) game.wallColor = "Blue";
+			if (this.ghostMode === 0) game.wallColor = "#b300ff";
 			else game.wallColor = "Red";
 			canvas_walls = document.createElement('canvas');
 			canvas_walls.width = game.canvas.width;
@@ -1484,8 +1483,8 @@ function geronimo() {
 
 		// Pills
 		context.beginPath();
-		context.fillStyle = "White";
-		context.strokeStyle = "White";
+		context.fillStyle = "#ffdd00";
+		context.strokeStyle = "#ffdd00";
 
 		var dotPosY;
 		if (game.map && game.map.posY && game.map.posY.length > 0) {
