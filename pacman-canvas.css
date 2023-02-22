@@ -1,4 +1,4 @@
-/* Google Web Fonts */
+/* Fonts */
 @font-face {
   font-family: 'Press Start 2P';
   font-style: normal;
@@ -8,6 +8,14 @@
        url('fonts/PressStart2Play.woff') format('woff'),
        url('fonts/PressStart2Play.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: 'VazirMatn';
+	font-style: bold;
+	font-weight: 800;
+	src: url('fonts/Vazirmatn-Bold.woff2') format('woff2'),
+		 url('');
+  }
 
 /* ---------------- */
 

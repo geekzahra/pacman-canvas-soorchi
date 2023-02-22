@@ -11,14 +11,12 @@ ______ |  | _____ _/  |________|  |__/_   |______  ______ ____ |  |__
 
 
 @font-face {
-    font-family: 'Socialico';
-    src: url(fonts/Socialico.otf) format('otf'),
-         url(fonts/Socialico.ttf) format('ttf');
-    src: local('Socialico'), local(Socialico),
-         url(fonts/Socialico.otf) format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+	font-family: 'VazirMatn';
+	font-style: bold;
+	font-weight: 800;
+	src: url('fonts/Vazirmatn-Bold.woff2') format('woff2'),
+		 url('');
+  }
 
 a img { border: none; }
 
@@ -32,7 +30,9 @@ h1 {    font-size: 2em; }
 h2 {    font-size: 1.7em; }
 h3 {    font-size: 1.5em; }
 	
-
+li, div p{
+	font-family: 'VazirMatn';
+}
 html, body {
 	width:100%;
 	font-family: 'Quando', serif;
