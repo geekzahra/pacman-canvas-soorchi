@@ -4,7 +4,7 @@
 <html lang="en" manifest="cache.manifest">
 <head>
 	<meta charset="utf-8" />
-	<title>Pacman in HTML 5 Canvas</title>
+	<title>پک‌من (نسخه‌ی سورچی)</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="pacman-canvas.css">
 	<link rel="manifest" href="manifest.json">
@@ -77,13 +77,13 @@
 
 <!-- Display this message if Javascript is disabled -->
 <noscript>
-<h2>Enable Javascript!</h2>
-<p>This HTML 5 app requires Javascript to run. Please check that Javascript is enabled in your browser.</p>
+<h2>جاوااسکریپت فعال نیست!</h2>
+<p>این بازی برای اجرا شدن نیاز به جاوا اسکریپت داره. لطفا مطمئن شو جاوا اسکریپت روی مرورگرت فعاله.</p>
 </noscript>
 
 <!-- Highscore -->
 <div class="content" id="highscore-content">
-	<div class="button" id="back">&lt; back</div>
+	<div class="button" id="back">&lt; بازگشت</div>
 	<div>
 		<h1>امتیازات شما</h1>
 		<p>
@@ -96,67 +96,55 @@
 
 <!-- INSTRUCTIONS -->
 <div class="content" id="instructions-content">
-	<div class="button" id="back">&lt; back</div>
+	<div class="button" id="back">&lt; بازگشت</div>
 	<div>
-		<h1>Instructions</h1>
+		<h1>راهنمایی</h1>
 		<div class="nomobile">
-			<h2>Controls</h2>
-			<p>Use your arrow keys or [W,A,S,D] keys to navigate pacman.</p>
-			<p>To pause / resume the game press [SPACE] or [ESC] or just click into the game area.</p>
+			<h2>کنترل‌ها</h2>
+			<p>با استفاده از کلیدهای جهت یا [A W S D] کیبرد، پکمن را حرکت می‌دهید.</p>
+			<p>برای توقف / ادامه بازی از دکمه‌ی [ESC] یا [SPACE] استفاده کنید یا به سادگی بر روی صفحه‌ی بازی یک بار کلیک کنید.</p>
 		</div>
 		<div class="mobile">
-			<h2>Controls</h2>
-			<p>Use swipe gestures to navigate pacman.</p>
-			<p>Alternatively use the Arrow Buttons underneath the game area to navigate pacman.</p>
-			<p>To pause / resume the game, touch the game area once.</p>
+			<h2>کنترل‌ها</h2>
+			<p>با استفاده از کلیدهای جهت پایین صفحه یا کنترل‌های لمسی صفحه نمایش پکمن را حرکت می‌دهید.</p>
+			<p>برای توقف / ادامه بازی یک بار بر روی صفحه‌ی نمایش بازی ضربه بزنید.</p>
 		</div>
 
 		<div>
-			<h2>Ghosts</h2>
-			<p>Ghosts are creatures that hunt pacman and will kill him if they catch him.</p>
-			<p>Every ghost has its own strategy to chase down pacman.</p>
+			<h2>اشباح:</h2>
+			<p>اشباح موجوداتی هستند که در صورت رسیدن به پکمن باعث باخت شما در بازی و کشته شدن پکمن می‌شوند.</p>
+			<p>هر کدام از اشباح استراتژی منحصربفردی برای شکست دادن پکمن دارند:</p>
 			<h3>Inky<img src="img/inky.svg" class="pull-right"></h3>
-			Inky will stay in the ghost house until pacman has eaten at least 30 pills.	His home is the bottom right corner.
+			اینکی تا وقتی که پکمن حداقل 30 سکه بخورد در خانه‌ی اشباح می‌ماند. خانه‌ی او در گوشه‌ی پایین، سمت راست می‌باشد.
 			<h3>Blinky <img src="img/blinky.svg" class="pull-right"></h3>
-			Blinky is the most agressive of the 4 ghosts. He will start chasing pacman right away, and aim directly at him. His home is the upper right corner.
+			بلینکی عصبی‌ترین شبح بازی است :) او بلافاصله با شروع بازی پکمن را تعقیب می‌کند و مستقیم به سمت او حرکت می‌کند. خانه‌ی او در گوشه‌ی بالا، سمت راست می‌باشد.
 			<h3>Pinky<img src="img/pinky.svg" class="pull-right"></h3>
-			Pinky will start chasing pacman right away, he will always aim 4 fields ahead and 4 fields left of pacman. His home is the upper left corner.
+			پینکی هم بلافاصله بعد از شروع بازی پکمن را تعقیب می‌کند و همیشه 4 واحد جلوتر یا عقب‌تر از پکمن را هدف قرار می‌دهد. خانه‌ی او در گوشه‌ی بالا، سمت چپ می‌باشد.
 			<h3>Clyde<img src="img/clyde.svg" class="pull-right"></h3>
-			Inky will stay in the ghost house until pacman has eaten at least 2/3 of all pills. His home is the bottom left corner.
+			کلاید تا زمانی که پکمن حداقل 2/3 همه‌ی سکه‌ها را بخورد در خانه‌ی اشباح می‌ماند. خانه‌ی او در گوشه‌ی پایین، سمت چپ می‌باشد.
 		</div>
 
 		<div>
-			<h2>Ghost moods</h2>
-			The ghosts have two different moods that change the way they act during the game.
-			<h3>Scatter mood</h3>
-			<p>This is the default mood. When ghosts are in scatter mood, they will just go to their home corner and stay there.</p>
+			<h2>وضعیت اشباح:</h2>
+			اشباح 2 وضعیت متفاوت دارند که باعث تغییر رفتار آن‌ها در طی بازی می‌شود.
+			<h3>وضعیت پراکنده</h3>
+			<p>این وضعیت به صورت پیشفرض وجود دارد. زمانی که اشباح در وضعیت پراکنده هستند، فقط به خانه‌ی خود می‌روند و همان‌جا می‌مانند.</p>
 			<img src="img/instructions/instructions_scatter.PNG">
-			<h3>Chase mood</h3>
-			<p>After a certain time the ghosts change their mood and want to go chasing pacman. This is indicated through the walls turning red.</p>
+			<h3>وضعیت تعقیب</h3>
+			<p>پس از گذشت زمان مشخصی، اشباح وضعیتشان را تغییر می‌دهند و قصد دارند پکمن را تعقیب کنند. این وضعیت در بازی، با تغییر رنگ دیوارها به رنگ قرمز نشان داده می‌شود.</p>
 			<img src="img/instructions/instructions_chase.PNG">
 		</div>
 
 		<div>
-			<h2>Items</h2>
-			<h3>Pills</h3>
-			<p>The goal of every level is, to eat all the white pills without getting catched by the ghosts. One pill results in 10 points.</p>
-			<h3>Powerpills</h3>
-			<p>In every level there are 4 powerpills, which are a bit bigger than the regular ones. If Pacman eats those, he will get strong enough to eat the ghosts. You can see this indicated by the ghosts turning blue. One powerpill results in 50 points.</p>
+			<h2>عناصر بازی</h2>
+			<h3>سکه‌</h3>
+			<p>هدف پکمن در هر مرحله، خوردن تمامی سکه‌ها بدون برخورد با اشباح است. توجه داشته باشید که هر سکه 10 امتیاز دارد.</p>
+			<h3>سوپرسکه</h3>	
+			<p>در هر مرحله 4 سوپرسکه وجود دارد که کمی بزرگ‌تر از سکه‌های عادی هستند. اگر پکمن هر یک از آن‌ها را بخورد، به قدری قوی می‌شود که می‌تواند اشباح را بخورد :) در این حالت، پس از خوردن هر سوپر سکه، اشباح به رنگ آبی درمی‌آیند. هر سوپر سکه 50 امتیاز دارد.</p>
 			<img src="img/instructions/instructions_powerpill.PNG">
-			<p>Eating a ghost results in 100 points. The soul of the ghost will return to the ghost house before starting to chase Pacman again.</p>
+			<p>خوردن هر یک از اشباح 100 امتیاز دارد! روح شبح خورده شده، قبل از اینکه شبح مجددا بتواند به تعقیب پکمن بپردازد، به خانه‌ی اشباح برمی‌گردد.</p>
 		</div>
 
-	</div>
-</div>
-
-<!-- Info -->
-<div class="content" id="info-content">
-	<div class="button" id="back">&lt; back</div>
-	<div>
-		<h1>Info</h1>
-		<p>Current Version: <span class="app-version">1.0.6 (2022-08-14)</span></p>
-		<img src="img/platzh1rsch-logo.png">
-		<p>Pacman Canvas is Open Source, written by <a href="http://platzh1rsch.ch">platzh1rsch</a>. You can get the code on <a target="_blank" href="https://github.com/platzhersh/pacman-canvas" target="_blank">github</a>.</p>
 	</div>
 </div>
 
@@ -181,9 +169,9 @@
 	<!-- main game content -->
 	<div class="game wrapper">
 	
-		<div class="score">Score:</div>
-		<div class="level">Lvl:</div>
-		<div class="lives">Lives:</div>
+		<div class="score">امتیاز :</div>
+		<div class="level">مرحله :</div>
+		<div class="lives">فرصت:</div>
 		
 		<div class="controlSound">
 			<img src="img/audio-icon-mute.png" id="mute">
@@ -197,7 +185,7 @@
 				</div>
 			</div>
 			<canvas id="myCanvas" width="540" height="390">
-			<p>Canvas not supported</p>
+			<p>متاسفانه canvas ساپورت نمیشه :(/p>
 			</canvas>
 		</div>
 
@@ -211,9 +199,10 @@
 				<span id="up" class="controlButton">&uarr;</span>
 			</div>
 			<div>
-				<span id="left" class="controlButton">&larr;</span>
-				<span id="down" class="controlButton">&darr;</span>
 				<span id="right" class="controlButton">&rarr;</span>
+				<span id="down" class="controlButton">&darr;</span>
+				<span id="left" class="controlButton">&larr;</span>
+
 			</div>
 			
 		</div>

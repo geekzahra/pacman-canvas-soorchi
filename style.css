@@ -129,7 +129,7 @@ ul.nav a, ul.nav a:link, ul.nav a:active, ul.nav a:visited, ul.nav a:hover, ul.n
 	display: inline-block;
 	position: static;
     margin: 0 auto;
-    text-align: left;
+    text-align: right;
 	}
 
 .header { display: none;}

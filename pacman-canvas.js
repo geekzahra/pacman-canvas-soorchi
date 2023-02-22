@@ -171,7 +171,7 @@ function geronimo() {
 		this.monsters;
 		this.level = 1;
 		this.refreshLevel = function (h) {
-			$(h).html("Lvl: " + this.level);
+			$(h).html("مرحله : " + this.level);
 		};
 		this.canvas = $("#myCanvas").get(0);
 		this.wallColor = "Blue";
@@ -314,7 +314,7 @@ function geronimo() {
 			for (var i = 0; i < count; i++) {
 				html += " <img src='img/heart.png'>";
 			}
-			$(".lives").html("Lives: " + html);
+			$(".lives").html("مهلت‌ها : " + html);
 
 		};
 
@@ -621,7 +621,7 @@ function geronimo() {
 			this.score += i;
 		};
 		this.refresh = function (h) {
-			$(h).html("Score: " + this.score);
+			$(h).html("امتیاز : " + this.score);
 		};
 
 	}
